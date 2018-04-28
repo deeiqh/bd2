@@ -2,33 +2,76 @@ Lab #3
 
 Ejercicio 17.27
 
-	B = 512 bytes
-	G = 128 bytes
-	blocks per track = 20
-	tracks per surface = 400
-	15 double-sided disks
+        B = 512 bytes
+        G = 128 bytes
+        blocks per track = 20
+        tracks per surface = 400
+        15 double-sided disks
 
 a. 
-	capacidad total por track = (512+128)*20 = 12800 bytes = 12,5 KB
+      capacidad total por track = (512+128)*20 = 12800 bytes = 12,5 KB
+      
 	capacidad sin gaps = 512*20 = 10 Kbytes . Notar que K = 1024
 
 b.
-	400 cilindros
+      400 cilindros
 c.
-	capacidad total:	(512+128)*20*30 = 384000 B = 37,5 KB:
-	capacidad útil: 	512*20*30 = 307200 B = 300KB
+      capacidad total:        (512+128)*20*30 = 384000 B = 37,5 KB:
+
+      capacidad útil:         512*20*30 = 307200 B = 300KB
 d.
-	disco:
-		capacidad total:	384000*400 = 146 MB
-		capacidad útil:		307200*400 = 117,18 MB
+      disco:
+
+      capacidad total:        384000*400 = 146 MB
+
+      capacidad útil:         307200*400 = 117,18 MB
+
 e.
-	tr = (12,5*1000)/(60*2400) *1000 = 86.8 B/msec
-	btt = 512/86.8 = 5,89ms
-f.
+      tr = (12,5*1024)/(60*2400)*1000 = 88.8 B/msec
+
+      btt = 512/88.8 = 5,76ms
+
+	rotational delay, rd = (1/2)*(1/2400) = 0,000208333 min
+				    = 0,000208333*60*1000 = 12,49ms
+
+	btr = (512/(512+128))*88,8 = 71,04 bytes/msec
+		
+f.	tiempo promedio para localizar y transferir un bloque
+	= btt + rd + st = 5,76 + 12,49 + 30 = 48,25ms
+        
+--------------------------------------------------------------------------------
+Ejercicio 17.28
+
+file:
+	r = 20000
+records:
+	Name			(30B)
+	Ssn			(9B)
+	Address		(40B)
+	Phone			(10B)
+	Birth_date		(8B)
+	Sex			(1B)
+	Major_dept_code	(4B)
+	Minor_dept_code	(4B)
+	Class_code		(4B)
+	Degree_program	(3B)
+	1B as deletion marker
+
+a.
+	R = 30+9+40+10+8+1+4+4+4+3 = 113B + 1B = 114B
+b.
+	bfr = redondeo a piso (512/114) = 4
+	b = redondeo a techo (20000/4) = 5000
+c.
+	i:	30 + 12,49 + ((5000/2)*(512/71,04) = 18060,50 ms
+								= 18,06050s
+	ii:
+		2500*(30 + 12,49 + 5,76) = 120625ms
+						  = 120,625s
+d.
 	
+	tiempo por binary search al buscar Ssn
 
-
-
-
-
-
+		= redondeo a techo(log2 5000)*(30+12,5+5,76)
+		= 13×(30+12,5+5,76) = 627,38ms
+		= 0,627s
