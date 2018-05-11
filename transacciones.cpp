@@ -12,8 +12,8 @@ int main()
 x [x1][x2] maneja las variables de las transacciones que van a ser escritas en la misma psicion del disco.
 y [y1][y2]
 
-x_disco;
-y_disco;
+      x y
+disco [][];
 
 read(t1,x);
 restar(t1,x,n);
