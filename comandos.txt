@@ -1,0 +1,11 @@
+disco(x,y,3,5)
+read(t1,x)
+restar(t1,x,1)
+write(t1,x)
+read(t1,y)
+sumar(t1,y,1)
+write(t1,y)
+read(t2,x)
+sumar(t2,x,2)
+write(t2,x)
+fin
