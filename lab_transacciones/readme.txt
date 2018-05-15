@@ -1,6 +1,3 @@
-Kevin Salazar, 20162013
-Laboratorio 5, transacciones.
-
 El orden de los comandos de las transacciones serán ingresados por un archivo de
 textos, donde:
 
