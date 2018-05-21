@@ -1,5 +1,8 @@
+//INCOMPLETO!!
+
 //IDEA GENERAL PARA TOMAR EN CUENTA EN EL TRABAJO GRUPAL
-#include <iostream>
+#include <io
+stream>
 #include <list>
 #include <map>
 
